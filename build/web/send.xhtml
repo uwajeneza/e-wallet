@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>E-wallet | Send</title>
+        <link href="main.css" rel="stylesheet" type="text/css"/>
+    </h:head>
+    <h:body>
+        <h1>Send Money</h1>
+        <h:form>
+            <h:messages  id="error-message" class="error-message" infoClass="info" errorClass="error" fatalClass="fatal"/>
+            
+            <p>#{ewallet.loggedInUser}</p>
+            <h:panelGrid columns="2">
+                <h:outputLabel value="Reciever Account" for="recieverAccount" />
+                <h:inputText id="recieverAccount" value="#{ewallet.credentials.enteredNationalId}" title="RecieverAccount" required="true"/>
+                <h:outputLabel value="Transfer Amount" for="transferAmount" />
+                <h:inputSecret id="transferAmount" value="#{ewallet.credentials.enteredPassword}" title="TransferAmount" required="true"/>
+                <h:commandButton action="#{ewallet.send()}" value="Transfer"/>
+            </h:panelGrid>
+            <a href="accountDetails.xhtml">My account</a>
+            <br></br>
+            <h:commandButton action="#{ewallet.goToUserInfo}" value="My account"/>
+        </h:form>
+    </h:body>
+</html>
+

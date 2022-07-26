@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>E-wallet | Create Account - Step 2</title>
+        <link href="main.css" rel="stylesheet" type="text/css"/>
+    </h:head>
+    <h:body>
+        <h1>Create Account</h1> 
+        <h:form>
+            <h2><h:outputText value="Account Details"/></h2>
+            <h:panelGrid columns="2">
+                
+                <h:outputLabel value="Account Name:" for="accountName" />
+                <h:inputText id="accountName" value="#{ewallet.account.accountName}" title="AccountName" disabled="true"/>
+                <h:outputLabel value="National Id:" for="NationalId" />
+                <h:inputText id="nationalId" value="#{ewallet.account.nationalId}" title="NationalId" disabled="true"/>
+                <h:outputLabel value="Account Number:" for="accountNumber" />
+                <h:inputText id="accountNumber" value="#{ewallet.account.accountNumber}" title="AccountNumber" disabled="true"/>
+                <h:outputLabel value="Amount" for="amount" />
+                <h:inputText id="amount" value="#{ewallet.account.amount}" title="Amount" disabled="true"/>
+                
+                <h:commandButton action="#{ewallet.createAccount()}" value="Submit" />
+                <h:commandButton action="#{ewallet.goToPrevious()}" value="Previous" />
+            </h:panelGrid>        
+        </h:form>
+        <a href="index.xhtml">Home</a>
+    </h:body>
+</html>
+
