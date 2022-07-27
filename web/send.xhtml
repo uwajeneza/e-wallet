@@ -14,14 +14,13 @@
             <p>#{ewallet.loggedInUser}</p>
             <h:panelGrid columns="2">
                 <h:outputLabel value="Reciever Account" for="recieverAccount" />
-                <h:inputText id="recieverAccount" value="#{ewallet.credentials.enteredNationalId}" title="RecieverAccount" required="true"/>
+                <h:inputText id="recieverAccount" value="#{ewallet.sending.recieverAccount}" title="Reciever Account" />
                 <h:outputLabel value="Transfer Amount" for="transferAmount" />
-                <h:inputSecret id="transferAmount" value="#{ewallet.credentials.enteredPassword}" title="TransferAmount" required="true"/>
+                <h:inputText id="transferAmount" value="#{ewallet.sending.sentAmount}" title="Transfer Amount" />
                 <h:commandButton action="#{ewallet.send()}" value="Transfer"/>
             </h:panelGrid>
-            <a href="accountDetails.xhtml">My account</a>
             <br></br>
-            <h:commandButton action="#{ewallet.goToUserInfo}" value="My account"/>
+            <h:commandButton action="#{ewallet.goToUserInfo()}" value="My account"/>
         </h:form>
     </h:body>
 </html>

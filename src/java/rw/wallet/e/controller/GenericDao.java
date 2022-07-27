@@ -132,21 +132,4 @@ public class GenericDao {
             return null;
         }
     }
-    
-        public Account findUserAccount(String logedInUser){
-        Account foundUserAccount = null;
-        try {
-            session = HibernateUtil.getSessionFactory().openSession();
-//            foundUserAccount = (Account)session.get(Account.class, logedInUser);
-            foundUserAccount = (Account) session.createCriteria(Account.class, logedInUser);
-            session.close();
-            if (foundUserAccount==null) {
-                return null;
-            } else {
-                return foundUserAccount;
-            }
-        } catch (HibernateException e) {
-            return null;
-        }
-    }
 }

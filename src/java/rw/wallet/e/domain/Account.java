@@ -3,7 +3,6 @@ package rw.wallet.e.domain;
 import java.io.Serializable;
 import javax.persistence.Entity;
 import javax.persistence.Id;
-import javax.persistence.ManyToOne;
 
 /**
  *
@@ -16,18 +15,16 @@ public class Account implements Serializable {
     private String nationalId;
     private String accountName;
     private double amount;
-    private User user;
 
     public Account() {
         amount= 1000.0;
     }
 
-    public Account(long accountNumber, String nationalId, String accountName, double amount, User user) {
+    public Account(long accountNumber, String nationalId, String accountName, double amount) {
         this.accountNumber = accountNumber;
         this.nationalId = nationalId;
         this.accountName = accountName;
         this.amount = amount;
-        this.user = user;
     }
 
     public long getAccountNumber() {
@@ -60,16 +57,5 @@ public class Account implements Serializable {
 
     public void setAmount(double amount) {
         this.amount = amount;
-    }
-
-    public User getUser() {
-        return user;
-    }
-
-    public void setUser(User user) {
-        this.user = user;
-    }
-
-    
-    
+    }    
 }
