@@ -6,6 +6,47 @@
     <h:head>
         <title>E-wallet | Create Account</title>
         <link href="main.css" rel="stylesheet" type="text/css"/>
+            <style>
+                * {
+                    font-family: serif;
+                }
+                body{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    padding: 90px;
+                    background-color:skyblue;     
+                }
+                input[type="submit"] {
+                    padding: 8px 12px;
+                    background-color: white;
+                    border: none;
+                    border-radius: 10px;
+                    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2), 0 3px 10px 0 rgba(0,0,0,0.19);
+                    cursor: pointer;
+                }
+                input[type="submit"]:hover {
+                    background-color: #ccffcc;
+                }
+                ul {
+                    list-style-type: none;
+                }
+                li {
+                    margin-bottom: 20px;
+                }
+                span{
+                    padding: 0px 25px 0px 0px;
+                }
+                a {
+                    text-decoration: none;
+                    color: black;
+
+                }
+                a:hover{
+                    color: orangered;
+                }
+            </style>
     </h:head>
     <h:body>
         <div class="authform"> 
@@ -36,10 +77,9 @@
                         
                         <h:commandButton action="#{ewallet.goToNext()}" value="Next" />
                     </h:panelGrid>
-                    <a href="index.xhtml">Home</a>
                 </h:form>
             </f:view>
-
+            <a href="index.xhtml">Home</a>
         </div>
     </h:body>
 </html>

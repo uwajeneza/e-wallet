@@ -1,10 +1,124 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
 /* 
+    Created on : Jun 10, 2022, 3:39:33 PM
+    Author     : nicole
+*/
+
+.error{
+    color: red;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 90px;
+    background-color:blue;     
+}
+
+form{
+    margin: 0 auto;
+    padding: 50px;
+    background-color: lightyellow;
+        
+}
+
+.view{
+th,td{
+   padding: 30px;   
+}
+th{
+    background-color: burlywood;
+    color: white;
+     padding: 50px;
+}
+}/* 
     Created on : Jul 25, 2022, 2:32:54 PM
     Author     : nicole
 */
 
 * {
-    box-sizing: border-box;
+    box-sizing: border-box;/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Jun 10, 2022, 3:39:33 PM
+    Author     : nicole
+*/
+
+.error{
+    color: red;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 90px;
+    background-color:skyblue;
+        
+}
+form{
+    margin: 0 auto;
+    padding: 50px;
+    background-color: lightyellow;
+        
+}/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Jun 10, 2022, 3:39:33 PM
+    Author     : nicole
+*/
+
+.error{
+    color: red;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 90px;
+    background-color:skyblue;
+        
+}
+form{
+    margin: 0 auto;
+    padding: 50px;
+    background-color: lightyellow;
+        
+}
+.view{
+th,td{
+   padding: 30px;
+   
+}
+th{
+    background-color: burlywood;
+    color: white;
+     padding: 50px;
+}
+}
+.view{
+th,td{
+   padding: 30px;
+   
+}
+th{
+    background-color: burlywood;
+    color: white;
+     padding: 50px;
+}
+}
     margin: 0;
     padding: 0;
     font-family: sans-serif;

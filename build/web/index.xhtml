@@ -4,17 +4,52 @@
       xmlns:h="http://xmlns.jcp.org/jsf/html">
     <h:head>
         <title>E-wallet | Home</title>
-        <link href="main.css" rel="stylesheet" type="text/css"/>
+        <link href="./main.css" rel="stylesheet" type="text/css"/>
+        <style>
+            * {
+                font-family: serif;
+            }
+            body{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                padding: 90px;
+                background-color:skyblue;     
+            }
+            input[type="submit"] {
+                padding: 8px 12px;
+                background-color: white;
+                border: none;
+                border-radius: 10px;
+                box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2), 0 3px 10px 0 rgba(0,0,0,0.19);
+                cursor: pointer;
+            }
+            input[type="submit"]:hover {
+                background-color: #ccffcc;
+            }
+            ul {
+                list-style-type: none;
+            }
+            li {
+                margin-bottom: 20px;
+            }
+            span{
+                padding: 0px 25px 0px 0px;
+            }
+        </style>
     </h:head>
-    <h:body>
-        Welcome to E-wallet
+    <h:body>    
+        <h1>Welcome to E-wallet</h1>
         <div>
             <h:form>
                 <ul>
                     <li>
+                        <span>Don't have an account? </span>
                         <h:commandButton action="#{ewallet.goToCreateAccount()}" value="Create Account" />
                     </li>
                     <li>
+                        <span>Already have an account? </span>
                         <h:commandButton action="#{ewallet.goToLogin()}" value="My Account" />
                     </li>
                 </ul>
